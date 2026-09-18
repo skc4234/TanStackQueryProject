@@ -4,7 +4,7 @@ pipeline {
 
     environment {
         IMAGE_NAME = "react-app:latest"
-        APP_DIR = "./app"
+        APP_DIR = "/home/sist/app"
     }
 
     stages {
@@ -63,7 +63,7 @@ pipeline {
         stage('Rolling Deploy') {
             steps {
                 sh '''
-                    # cd ${APP_DIR}
+                    cd ${APP_DIR}
 
                     echo "===== 최신 이미지 확인 ====="
                     docker images react-app
