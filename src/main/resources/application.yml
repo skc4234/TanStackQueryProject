@@ -1,21 +1,18 @@
-# port 결정 => default 8080 => 9090
-# Eginx: 80 / Jenkins: 8080 => port 번호 충돌 안나게 변경
-server:
-  port: 8080
-  servlet:
-    context-path: /
+#port => default : 8080 => 
+#spring => 데이터베이스 (datasource)
 spring:
   datasource:
-    url: ${LOCAL_DB_URL}
+    url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    driver-class-name: oracle.jdbc.driver.OracleDriver  
   thymeleaf:
     cache: false
     encoding: UTF-8
-    prefix: classpath:templates/
+    prefix: classpath:/templates/
     suffix: .html
     mode: HTML
+# mybatis 
 mybatis:
   type-aliases-package: com.sist.web.vo
   mapper-locations: mybatis/mapper/*.xml
