@@ -5,7 +5,7 @@ pipeline {
     environment {
 
         // Docker Hub 이미지
-        IMAGE_NAME = "chaijewon/react-app:latest"
+        IMAGE_NAME = "skc4234/react-app:latest"
 
         // 배포 서버 디렉터리
         APP_DIR = "/home/sist/app"
